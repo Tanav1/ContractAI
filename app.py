@@ -107,8 +107,7 @@ def analyze_pdf():
                 df = df[df['Content'].notna() & (df['Content'] != '') & (df['Content'].str.len() >= 30)]
                 st.dataframe(df)
 
-                # Get API key from user
-                api_key = st.text_input("Enter your API key for AI model:", type="password")
+                api_key = st.secrets["API_KEY"]
                 if api_key and st.button('Analyze Headers'):
                     # Call the AI model
                     important_headers = setup_model(api_key, df['Headers'].tolist())
