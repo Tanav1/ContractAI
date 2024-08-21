@@ -134,7 +134,14 @@ def analyze_pdf():
 
                     key_insights = setup_model_key_insights(merged_df, api_key)  # Adjust API key if different
                     st.write("Generated Key Insights from RFP:")
-                    st.text(key_insights)
+                    #st.text(key_insights)
+                    st.markdown(key_insights)
+
+                    st.download_button(
+                    label="Download Report as Text",
+                    data=key_insights,
+                    file_name="ContractAI_Report.txt",
+                    mime="text/plain")
 
         except Exception as e:
             st.error(f"Failed to process PDF file: {str(e)}")
