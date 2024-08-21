@@ -92,7 +92,7 @@ def analyze_pdf():
             f.write(uploaded_file.getbuffer())
 
         try:
-            with st.spinner('Extracting text from PDF...'):
+            with st.spinner('Loading. Please Wait...'):
                 text_dict = extract_text_with_headers(file_path)
                 cleaned_data = {clean_text(header): clean_text(content) for header, content in text_dict.items()}
                 df = pd.DataFrame(list(cleaned_data.items()), columns=['Headers', 'Content'])
