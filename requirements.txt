@@ -1,9 +1,9 @@
 streamlit==1.12.0
-PyPDF2==3.0.1
-pymupdf==1.19.6
+pdfminer==20191125
+pdfminer.six==20231228
+pandas
 fuzzywuzzy==0.18.0
-pandas==1.4.2
 python-Levenshtein==0.12.2
-google-auth==2.6.2
-google-auth-oauthlib==0.4.6
-google-api-python-client==2.40.0
+numpy
+google-generativeai
+pdfplumber==0.11.4
