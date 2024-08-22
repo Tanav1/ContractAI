@@ -56,7 +56,7 @@ def setup_model_key_insights(merged_df, api_key):
     system_instruction_2 = f"""
     The following are headers, justifications, and content extracted from a government contract request for proposal (RFP). 
     Please take this information and generate a report with vital information for a proposal writer. Try to use as much information as possible that is fed, and also if you think something is missing and important, add it in.
-    The report should be formatted well and easy to read. 
+    The report should be formatted well and easy to read. Make sure to cite where exactly the information is coming from in the corpus.
     The headers, justifications, and content are as follows:
     {headers_justification_content_str}
     """
