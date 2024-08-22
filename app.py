@@ -77,6 +77,10 @@ def about():
     - **User Interface**: Built using Streamlit, the interface provides an easy-to-use platform for users to interact with the tool, upload documents, and receive outputs.
     """)
 
+
+    st.subheader("System Architecture")
+    st.image("path_to_image.jpg", caption='System Architecture Diagram', use_column_width=True)
+
 def analyze_pdf():
     st.title('ContractAI')
 
