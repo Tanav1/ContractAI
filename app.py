@@ -10,14 +10,14 @@ def home():
     st.title('Welcome to ContractAI')
 
     st.write("""
-    **Understanding Government RFPs with AI Technology**
+    **Understanding Government Request for Proposals (RFP) with AI Technology**
 
     ContractAI is built to assist proposal writers in navigating the detailed content of U.S. government contract documents. By using advanced technology to extract and analyze information from RFP PDFs, this tool aims to simplify the process, allowing you to focus on crafting winning proposals.
     """)
 
     st.header('Features of ContractAI')
     st.write("""
-    - **Efficient Processing**: Upload your Request for Porposal (RFP) document and quickly see key information extracted and organized for review.
+    - **Efficient Processing**: Upload your Request for Proposal (RFP) document and quickly see key information extracted and organized for review.
     - **High Accuracy**: Reduce the risk of human error with AI-driven data extraction that highlights essential details relevant to government contracts.
     - **Insightful Analysis**: Gain insights into your RFPs with analyses that highlight crucial clauses and requirements specific to government bids.
     """)
