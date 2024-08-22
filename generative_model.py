@@ -17,7 +17,7 @@ def setup_model(api_key, headers):
     ]
     system_instruction = f"""
     The following are headers extracted from a government contract request for proposal (RFP). 
-    Please identify and return the top 15 most important headers that would be helpful for a proposal writer. 
+    Please identify and return the top 20 most important headers that would be helpful for a proposal writer. 
     For each header, provide a justification explaining why it is important. 
     These headers are crucial for understanding the requirements, terms, and conditions of the RFP. 
     Please use the following format for each header and justification: 'Header: Justification'. 
