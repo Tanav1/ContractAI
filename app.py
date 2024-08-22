@@ -10,40 +10,41 @@ def home():
     st.title('Welcome to ContractAI')
 
     st.write("""
-    **Understanding Your Contracts with AI Technology**
+    **Understanding Government RFPs with AI Technology**
 
-    ContractAI is built to assist you in navigating the detailed content of contract documents. By using advanced technology to extract and analyze information from PDFs, this tool aims to simplify the process, allowing you to focus on what's important.
+    ContractAI is built to assist proposal writers in navigating the detailed content of U.S. government contract documents. By using advanced technology to extract and analyze information from RFP PDFs, this tool aims to simplify the process, allowing you to focus on crafting winning proposals.
     """)
 
     st.header('Features of ContractAI')
     st.write("""
-    - **Efficient Processing**: Upload your contract documents and quickly see key information extracted and organized for review.
-    - **High Accuracy**: Reduce the risk of human error with AI-driven data extraction that highlights essential details.
-    - **Insightful Analysis**: Gain insights into your contracts with analyses that highlight crucial clauses and requirements.
+    - **Efficient Processing**: Upload your Request for Porposal (RFP) document and quickly see key information extracted and organized for review.
+    - **High Accuracy**: Reduce the risk of human error with AI-driven data extraction that highlights essential details relevant to government contracts.
+    - **Insightful Analysis**: Gain insights into your RFPs with analyses that highlight crucial clauses and requirements specific to government bids.
     """)
 
     st.header('Using ContractAI')
     st.write("""
-    1. **Upload Your PDF**: Start by uploading your contract document directly into the application.
+    1. **Upload Your RFP PDF**: Start by uploading your government RFP document directly into the application.
     2. **Automatic Extraction**: Our system will analyze your document, identifying and extracting key information.
-    3. **Review Your Data**: Look over the extracted information and utilize the insights provided to better understand your contract's content.
+    3. **Review Your Data**: Look over the extracted information and utilize the insights provided to better understand the requirements and stipulations of the RFP.
     """)
 
-    st.header('A Supplement for Proposal Writers')
+    st.header('A Supplement for Government Proposal Writers')
     st.write("""
-    ContractAI is designed as a powerful supplement for proposal writers working across various sectors, including government contracting, legal affairs, and commercial procurement. By automating the extraction and analysis of key contractual elements, proposal writers can:
+    ContractAI is designed as a powerful supplement for proposal writers working specifically on U.S. government contracts. By automating the extraction and analysis of key contractual elements, proposal writers can:
     
-    - **Enhance Efficiency**: Streamline the initial review of complex documents, allowing more time to focus on strategic aspects of proposal writing.
-    - **Improve Accuracy**: Minimize the risk of overlooking critical details that could impact the success of a proposal.
-    - **Gain Competitive Edge**: Quickly identify clauses and requirements that are crucial for crafting a compelling proposal.
+    - **Enhance Efficiency**: Streamline the initial review of complex RFP documents, allowing more time to focus on strategic aspects of proposal writing.
+    - **Improve Accuracy**: Minimize the risk of overlooking critical details that could impact the success of a government bid.
+    - **Gain Competitive Edge**: Quickly identify clauses and requirements that are crucial for crafting a compelling government proposal.
     """)
 
     st.header('Getting Started')
     st.write("""
-    To begin, simply upload a document. The application is designed to handle structured PDF documents effectively. For the best results, ensure your PDFs are not encrypted and are in good condition.
+    To begin, simply upload an RFP document. The application is designed to handle structured PDF documents effectively, especially those issued by the U.S. government. For the best results, ensure your PDFs are not encrypted and are in good condition.
 
-    **Note**: The tool is optimized for clarity and ease of use, helping you decipher complex contracts with less effort.
+    **Note**: The tool is optimized for clarity and ease of use, helping you decipher complex government contracts with less effort.
     """)
+
 
 
 
@@ -51,34 +52,31 @@ def about():
     st.title('About ContractAI')
 
     st.write("""
-    ### Technical Overview of ContractAI
+    ### Technical Overview of ContractAI for Government RFPs
 
     **Technology and Libraries**:
-    ContractAI leverages a combination of Python libraries and advanced AI algorithms to process and analyze contract documents effectively. Key technologies include:
+    ContractAI leverages a combination of Python libraries and advanced AI algorithms to process and analyze U.S. government RFP documents effectively. Key technologies include:
 
-    - **PyPDF2 and PyMuPDF (fitz)**: Used for reading and extracting text from PDF files.
+    - **PDF Processing Libraries (PyPDF2, PyMuPDF)**: Used for reading and extracting text from PDF files, which are commonly used for RFPs.
     - **Pandas**: Employs this data manipulation library to handle and organize extracted data efficiently.
-    - **FuzzyWuzzy**: Utilizes fuzzy logic for matching text, which is crucial for aligning and comparing document headers.
-    - **Google's Generative AI**: Interacts with Google Gemini 1.5 Pro's advanced model to generate insights and summarize content.
+    - **FuzzyWuzzy**: Utilizes fuzzy logic for matching text, crucial for aligning and comparing document headers within RFPs.
+    - **Google's Generative AI**: Interacts with Google Gemini 1.5 Pro's advanced model to generate insights and summarize content relevant to proposal writing.
 
     **AI and Machine Learning**:
-    The backbone of ContractAI involves generative AI models hosted by Google that interpret and analyze text. These models are configured to:
+    The backbone of ContractAI involves generative AI models hosted by Google that interpret and analyze text specifically tailored to government RFPs. These models are configured to:
 
-    - Identify key headers and content within contracts.
+    - Identify key headers and content within government contracts.
     - Provide justifications for why specific sections are important using natural language processing techniques.
 
     **Architecture**:
     ContractAI operates on a streamlined architecture designed for scalability and efficiency:
     
-    - **Extraction Layer**: Extracts text from PDFs and identifies headers using style and text analysis.
+    - **Extraction Layer**: Extracts text from RFP PDFs and identifies headers using style and text analysis.
     - **Processing Layer**: Cleans and preprocesses text data, making it ready for analysis.
     - **AI Layer**: Utilizes configured AI models to interpret extracted data and generate actionable insights.
     - **User Interface**: Built using Streamlit, the interface provides an easy-to-use platform for users to interact with the tool, upload documents, and receive outputs.
-
     """)
 
-    st.subheader("System Architecture")
-    st.image("assets/ContractAI-Architecture.png", caption='System Architecture Diagram', use_column_width=True)
 def analyze_pdf():
     st.title('ContractAI')
 
