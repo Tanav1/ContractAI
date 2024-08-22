@@ -79,7 +79,7 @@ def about():
 
 
     st.subheader("System Architecture")
-    st.image("path_to_image.jpg", caption='System Architecture Diagram', use_column_width=True)
+    st.image("assets/ContractAI-Architecture.png", caption='System Architecture Diagram', use_column_width=True)
 
 def analyze_pdf():
     st.title('ContractAI')
@@ -138,71 +138,6 @@ def analyze_pdf():
             st.error("Make sure the PDF is not encrypted or corrupt.")
 
 
-# def analyze_pdf():
-#     st.title('ContractAI')
-
-#     uploaded_file = st.file_uploader("Choose a PDF file", type="pdf")
-#     if uploaded_file is not None:
-#         save_path = 'uploaded_files'
-#         if not os.path.exists(save_path):
-#             os.makedirs(save_path)
-#         file_path = os.path.join(save_path, uploaded_file.name)
-#         with open(file_path, "wb") as f:
-#             f.write(uploaded_file.getbuffer())
-
-#         try:
-#             text_dict = extract_text_with_headers(file_path)
-#             #st.text(text_dict)
-#             #cleaned_data = {header: clean_text(content) for header, content in text_dict.items()}
-#             cleaned_data = {clean_text(header): clean_text(content) for header, content in text_dict.items()}
-#             df = pd.DataFrame(list(cleaned_data.items()), columns=['Headers', 'Content'])
-#             df.dropna(inplace=True)
-
-#             if not df.empty:
-#                 st.write("Extracted and Cleaned Headers and Content:")
-#                 #df = df[df['Content'].notna() & (df['Content'] != '')]
-#                 df = df[df['Content'].notna() & (df['Content'] != '') & (df['Content'].str.len() >= 30)]
-#                 st.dataframe(df)
-
-#                 api_key = st.secrets["API_KEY"]
-#                 if api_key and st.button('Analyze Headers'):
-#                     # Call the AI model
-#                     important_headers = setup_model(api_key, df['Headers'].tolist())
-#                     important_headers_string = str(important_headers)
-#                     #st.text(important_headers_string)
-#                     header_justification_df = parse_ai_response(important_headers_string)
-#                     st.write("Most Important Headers + Justification from RFP:")
-#                     st.dataframe(header_justification_df)
-                    
-#                     header_justification_df['Headers'] = header_justification_df['Headers'].str.replace(':', '', regex=False)            
-
-#                     # Merge the dataframes on the 'Header' and 'Headers' columns (case-insensitive)
-#                     header_justification_df['matched_header'] = header_justification_df['Headers'].apply(
-#                     lambda x: get_closest_match(x, df['Headers'])
-#                                                     )
-
-#                     #missing_headers = header_justification_df[~header_justification_df['Headers'].isin(merged_df['Headers_y'])]['Headers']
-
-#                 # Merge based on the matched headers
-#                     merged_df = pd.merge(header_justification_df, df, left_on='matched_header', right_on='Headers', how='left')
-#                     merged_df = merged_df.replace('', pd.NA)  # Optional: convert empty strings to NaN
-#                     merged_df = merged_df.dropna(how='any')
-#                     #st.dataframe(merged_df)
-
-#                     key_insights = setup_model_key_insights(merged_df, api_key)  # Adjust API key if different
-#                     st.write("Generated Key Insights from RFP:")
-#                     #st.text(key_insights)
-#                     st.markdown(key_insights)
-
-#                     st.download_button(
-#                     label="Download Report as Text",
-#                     data=key_insights,
-#                     file_name="ContractAI_Report.txt",
-#                     mime="text/plain")
-
-#         except Exception as e:
-#             st.error(f"Failed to process PDF file: {str(e)}")
-#             st.error("Make sure the PDF is not encrypted or corrupt.")
 
 
 def main():
