@@ -29,6 +29,16 @@ def home():
     3. **Review Your Data**: Look over the extracted information and utilize the insights provided to better understand the requirements and stipulations of the RFP.
     """)
 
+    st.header('Demo Video')
+    demo_video_path = "assets/ContractAI.mp4" 
+    if os.path.exists(demo_video_path):
+        st.video(demo_video_path)
+    else:
+        st.write("Demo video not found.")
+
+
+
+
     st.header('A Supplement for Government Proposal Writers')
     st.write("""
     ContractAI is designed as a powerful supplement for proposal writers working specifically on U.S. government contracts. By automating the extraction and analysis of key contractual elements, proposal writers can:
@@ -80,7 +90,6 @@ def about():
 
     st.subheader("System Architecture")
     st.image("assets/ContractAI-Architecture.png", caption='System Architecture Diagram', use_column_width=True)
-
 def analyze_pdf():
     st.title('ContractAI')
 
