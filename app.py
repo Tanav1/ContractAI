@@ -67,7 +67,7 @@ def about():
     **Technology and Libraries**:
     ContractAI leverages a combination of Python libraries and advanced AI algorithms to process and analyze U.S. government RFP documents effectively. Key technologies include:
 
-    - **PDF Processing Libraries (PyPDF2, PyMuPDF)**: Used for reading and extracting text from PDF files, which are commonly used for RFPs.
+    - **PDF Processing Libraries (PDFMiner)**: Used for reading and extracting text from PDF files, which are commonly used for RFPs.
     - **Pandas**: Employs this data manipulation library to handle and organize extracted data efficiently.
     - **FuzzyWuzzy**: Utilizes fuzzy logic for matching text, crucial for aligning and comparing document headers within RFPs.
     - **Google's Generative AI**: Interacts with Google Gemini 1.5 Pro's advanced model to generate insights and summarize content relevant to proposal writing.
