@@ -143,8 +143,10 @@ def analyze_pdf():
                             mime="text/plain")
 
         except Exception as e:
-            st.error(f"Failed to process PDF file: {str(e)}")
-            st.error("Make sure the PDF is not encrypted or corrupt.")
+            st.error("API Key expired. Please contact the creator: thanjavuru_tanav@bah.com")
+
+            #st.error(f"Failed to process PDF file: {str(e)}")
+            #st.error("Make sure the PDF is not encrypted or corrupt.")
 
 
 
